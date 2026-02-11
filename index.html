@@ -42,7 +42,7 @@
 
         <div id="mobileMenu" class="mobileMenu">
         <a href="#!" class="closeBtnMenu">✕</a>
-        <a href="#alertBox" class="menu">Products</a>
+        <a id="" class="menu">Products</a>
         <a href="#TelegramGp" class="menu">Telegram bot</a>
         <a href="#alertBox" class="menu">For Reseller</a>
         <a href="#socialbox" class="menu">Contact Us</a>
@@ -83,7 +83,7 @@
                 <div class="hero">
         <h1>Buy Cheap Premium Subscriptions</h1>
         <p>Netflix • Telegram • Spotify • Games</p>
-        <a href="javascript:void(0)" class="heroBtn" id="browseBtn">Browse Products</a>
+        <a href="javascript:void(0)" class="heroBtn" id="browserBtn">Browse Products</a>
         </div>
         <div class="boxMotherCon">
             <div class="boxMother1">
@@ -130,7 +130,7 @@
         </div>
 
 
-        <div id="Src" class="searchbarCon">
+        <div id="searchbar" class="searchbarCon">
             <input class="searchbar" type="search" placeholder="Search your products" onkeyup="searchProducts()">
             <a href="#alertBox" class="searchIcon fa-solid fa-magnifying-glass"></a>
         </div>
@@ -166,8 +166,8 @@ function updateCategories(){
     <!-- end search bar script -->
         <div class="productcontainer" id="products">
             <div class="category">
-                <h1>ENTERTAINMENT STREAMING APPS</h1>
-                <div class="productshow">
+                <h1 class="catTitle">ENTERTAINMENT STREAMING APPS</h1>
+                <div class="productshow catContent">
 
                     <div class="productbox" id="Netflix">
                         <div class="productImgCon" >
@@ -195,8 +195,8 @@ function updateCategories(){
                 </div>
             </div>
             <div class="category">
-                <h1>EDUCATION</h1>
-                <div class="productshow">
+                <h1 class="catTitle">EDUCATION</h1>
+                <div class="productshow catContent">
                     <div class="productbox">
                         <div class="productImgCon">
                             <img class="productImg" src="Image/Duolingo.jpg" alt="Duolingo">
@@ -207,8 +207,8 @@ function updateCategories(){
                 </div>
             </div>
             <div class="category">
-                <h1>DESIGN & VIDEO</h1>
-                <div class="productshow">
+                <h1 class="catTitle">DESIGN & VIDEO</h1>
+                <div class="productshow catContent">
                     <div class="productbox" id="Canva">
                         <div class="productImgCon">
                             <img class="productImg" src="Image/Canva.jpg" alt="Canva">
@@ -226,8 +226,8 @@ function updateCategories(){
                 </div>
             </div>
             <div class="category">
-                <h1>Artificial Intelligence</h1>
-                <div class="productshow">
+                <h1 class="catTitle">Artificial Intelligence</h1>
+                <div class="productshow catContent">
                     <div class="productbox">
                         <div class="productImgCon">
                             <img class="productImg" src="Image/ChatGPT.jpg" alt="ChatGPT">
@@ -245,8 +245,8 @@ function updateCategories(){
                 </div>
             </div>
             <div class="category">
-                <h1>SOCIAL MEDIA & BUSINESS TOOLS</h1>
-                <div class="productshow">
+                <h1 class="catTitle">SOCIAL MEDIA & BUSINESS TOOLS</h1>
+                <div class="productshow catContent">
                     <div class="productbox">
                         <div class="productImgCon">
                             <img class="productImg" src="Image/Zoom.jpg" alt="Zoom">
@@ -271,8 +271,8 @@ function updateCategories(){
                 </div>
             </div>
             <div class="category">
-                <h1>VPN & Security</h1>
-                <div class="productshow">
+                <h1 class="catTitle">VPN & Security</h1>
+                <div class="productshow catContent">
                     <div class="productbox">
                         <div class="productImgCon">
                             <img class="productImg" src="Image/Norton.jpg" alt="Zoom">
@@ -699,16 +699,25 @@ function updateCategories(){
         </div>
     </div>
     <!-- telegram link-->
-        <a class="channelBox" target="_blank" href="https://t.me/+7o_t7gU5WHcwYjVl">✨Join Channel</a>
+        <div class="fabM">
+    <div class="fabM-menu" id="fabMenu">
+        <a href="https://t.me/+7o_t7gU5WHcwYjVl" target="_blank">✨ Join Channel</a>
+        <a href="https://t.me/RayluxMyanmar" target="_blank">🛒DM Admin</a>
+        <a href="#socialbox">💝 Our SocialMedia</a>
+    </div>
+    <div class="fabM-btn" id="fabMBtn">CONTACT US🌸</div>
+    </div>
     <!--END telegram link-->
     <script>
-const btn = document.getElementById("browseBtn");
-const target = document.getElementById("Src");
+document.getElementById("browserBtn").addEventListener("click", function () {
+    const target = document.getElementById("searchbar");
 
-btn.addEventListener("click", function () {
-  target.scrollIntoView({ behavior: "smooth" });
+    const y = target.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: y, behavior: "smooth" });
+
+    target.focus();
 });
-</script> 
+</script>
 <script>
 function scrollToProduct(id){
     document.getElementById(id).scrollIntoView({
@@ -716,6 +725,25 @@ function scrollToProduct(id){
         block: "center"
     });
 }
+</script>
+<!-- category -->
+<script>
+document.querySelectorAll(".catTitle").forEach(title=>{
+  title.addEventListener("click", ()=>{
+    title.parentElement.classList.toggle("active");
+  });
+});
+</script>
+
+<script>
+const fab = document.querySelector(".fabM");
+const fabBtn = document.getElementById("fabMBtn");
+const fabMenu = document.getElementById("fabMenu");
+
+fabBtn.addEventListener("click", () => {
+    fabMenu.classList.toggle("active");
+    fab.classList.toggle("active");
+});
 </script>
 </body>
 </html>
