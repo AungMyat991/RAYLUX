@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+        .Mobmenu {
+    display: none;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    }
+    @media (max-width:720px) {
+        .Mobmenu {
+            display: block;
+        }
+
+        .menu {
+        display: none;
+    }
+    }
+    </style>
+</head>
+<body>
+    <div class="menuBoxContainer">
+        <div class="logoContainer">
+            <img class="logo" src="Image/logo.png">
+        </div>
+        <div class="menuContainer">
+            <a href="#alertBox" class="menu">Products</a>
+            <a href="#TelegramGp" class="menu">Telegram bot</a>
+            <a href="#alertBox" class="menu">For Reseller</a>
+            <a href="#socialbox" class="menu">Contact Us</a>
+            <a href="#alertBox" class="menu">About Us</a>
+            <a href="#mobileMenu" class=" Mobmenu fa-solid fa-bars"></a>
+        </div>
+
+        <div id="mobileMenu" class="mobileMenu">
+        <a href="#!" class="closeBtnMenu">✕</a>
+        <a href="#alertBox" class="menu">Products</a>
+        <a href="#TelegramGp" class="menu">Telegram bot</a>
+        <a href="#alertBox" class="menu">For Reseller</a>
+        <a href="#socialbox" class="menu">Contact Us</a>
+        <a href="#alertBox" class="menu">About us</a>
+        </div>
+
+    </div>
+    <!-- Telegram Gp linked box -->
+    <div id="TelegramGp" class="social">
+        <p class="title">We only have Telegram Group with bot active right now</p>
+        <p class="title">Check Our Telegram Group? </p>
+        <a href="https://t.me/+fZBS27AJL_M2NTQ1" class="socialbox"> Go To Telegram Group</a>
+        <a href="#!" class="closeSocial">Not today</a>
+
+    </div>
+    <!--Social media box-->
+    <div id="socialbox" class="social">
+        <p class="title">Thanks For Checking Our Social Media!</p>
+        <a class="socialbox" href="https://t.me/RayluxDigitalProduct">Telegram</a>
+        <div class="wpipe"></div>
+        <a class="socialbox" href="https://www.facebook.com/share/1GAJ9eqg9X/">facebook</a>
+        <div class="wpipe"></div>
+        <a class="socialbox" href="https://www.tiktok.com/@raylux.premium.st?_r=1&_t=ZS-93MkZ6DdNrt">Tiktok</a>
+        <div class="wpipe"></div>
+
+        <a href="#!" class="closeSocial">OK</a>
+    </div>
+
+<!-- alarm boxs -->
+    <div id="alertBox" class="alertBox">
+  <p>Sorry,This function is not built yet.
+    thanks for your times :) </p>
+  <a href="#!" class="closeBtn">OK</a>
+</div>
+<!-- /alarm box-->
+
+    <div class="mainContainer">
+                <div class="hero">
+        <h1>Buy Cheap Premium Subscriptions</h1>
+        <p>Netflix • Telegram • Spotify • Games</p>
+        <a href="javascript:void(0)" class="heroBtn" id="browseBtn">Browse Products</a>
+        </div>
+        <div class="boxMotherCon">
+            <div class="boxMother1">
+                <div class="fw title">Promotions</div>
+                <div class="promoboxCon">
+                    
+                    <a href="#promo1" class="promobox">
+                    <h3>Join Our channel and Get promotions!</h3>
+                    <span>💝 Every Subscription</span>
+                    <b>10% off!</b>
+                    </a>
+
+                    <div class="promobox">
+                    <h3>Canva Owner Account Promotions</h3>
+                    <span>LifeTime</span>
+                    <b>30,000ks 40% off🔥</b>
+                    </div>
+
+                    <div class="promobox">
+                    <h3>Spotify Sale</h3>
+                    <span>3 Months</span>
+                    <b>45,000 Ks</b>
+                    </div>
+                </div>
+            </div>
+            <div class="boxMother2">
+                <div class="fw title">Our Top Sale Of This Month</div>
+                    <div class="productMother">
+                        <div class="topProductbox" onclick="scrollToProduct('Netflix')">Netflix</div>
+                        <div class="topProductbox" onclick="scrollToProduct('Spotify')">Spotify</div>
+                        <div class="topProductbox" onclick="scrollToProduct('Outline')">Outline VPN</div>
+                        <div class="topProductbox" onclick="scrollToProduct('Canva')">Canva</div>
+                    </div>
+            </div>
+        </div>
+        <!-- PromoBox1 -->
+                 <div id="promo1" class="modal">
+            <div class="modalContent fc">
+                <h2>🔥 Sent This Redeem Code [RAYLUX2026]</h2>
+                <p>And Get First Subscription 10% Discount</p>
+                <a href="https://t.me/RayluxMyanmar?text= Promotion Code: RAYLUX2026" class="buyBtn">Get Deal</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+
+        <div id="Src" class="searchbarCon">
+            <input class="searchbar" type="search" placeholder="Search your products" onkeyup="searchProducts()">
+            <a href="#alertBox" class="searchIcon fa-solid fa-magnifying-glass"></a>
+        </div>
+        <!-- search bar script -->
+        <script>
+function updateCategories(){
+    document.querySelectorAll(".category").forEach(cat=>{
+        let visibleProducts = cat.querySelectorAll(".productbox:not([style*='display: none'])");
+        if(visibleProducts.length === 0){
+            cat.style.display = "none";
+        }else{
+            cat.style.display = "block";
+        }
+    });
+}
+
+function searchProducts(){
+    let value = document.querySelector(".searchbar").value.toLowerCase();
+    let products = document.querySelectorAll(".productbox");
+
+    products.forEach(p=>{
+        let name = p.innerText.toLowerCase();
+        if(name.includes(value)){
+            p.style.display = "block";
+        }else{
+            p.style.display = "none";
+        }
+    });
+
+    updateCategories();
+}
+</script>
+    <!-- end search bar script -->
+        <div class="productcontainer" id="products">
+            <div class="category">
+                <h1>ENTERTAINMENT STREAMING APPS</h1>
+                <div class="productshow">
+
+                    <div class="productbox" id="Netflix">
+                        <div class="productImgCon" >
+                            <img class="productImg" src="Image/netflix.jpg" alt="Netflix">
+                        </div>
+                        <div class="productFw">Netflix Premium</div>
+                        <a href="#netflixDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+
+                    <div class="productbox" id="Image/Spotify">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/spotify.jpg" alt="Spotify">
+                        </div>
+                        <div class="productFw">Spotify Premium</div>
+                        <a href="#spotifyDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/applemusic.png" alt="Apple Music">
+                        </div>
+                        <div class="productFw">Apple Music</div>
+                        <a href="#appleMusicDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h1>EDUCATION</h1>
+                <div class="productshow">
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Duolingo.jpg" alt="Duolingo">
+                        </div>
+                        <div class="productFw">Duolingo</div>
+                        <a href="#duolingoDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h1>DESIGN & VIDEO</h1>
+                <div class="productshow">
+                    <div class="productbox" id="Canva">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Canva.jpg" alt="Canva">
+                        </div>
+                        <div class="productFw">Canva</div>
+                        <a href="#canvaDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Capcut.jpg" alt="CapCut">
+                        </div>
+                        <div class="productFw">CapCut</div>
+                        <a href="#capcutDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h1>Artificial Intelligence</h1>
+                <div class="productshow">
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/ChatGPT.jpg" alt="ChatGPT">
+                        </div>
+                        <div class="productFw">ChatGPT</div>
+                        <a href="#chatgptDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Gemini.jpg" alt="Gemini">
+                        </div>
+                        <div class="productFw">Gemini</div>
+                        <a href="#geminiDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h1>SOCIAL MEDIA & BUSINESS TOOLS</h1>
+                <div class="productshow">
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Zoom.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Zoom Premium</div>
+                        <a href="#ZoomDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/TelegramPre.jpg" alt="Telegram premium">
+                        </div>
+                        <div class="productFw">Telegram Pre</div>
+                        <a href="#TelegramDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/TelegramStar.jpg" alt="Telegram Star">
+                        </div>
+                        <div class="productFw">Telegram Star</div>
+                        <a href="#TelegramSDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <h1>VPN & Security</h1>
+                <div class="productshow">
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Norton.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Norton VPN</div>
+                        <a href="#NortonDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/Express.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Express VPN</div>
+                        <a href="#ExpressDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox" id="Outline">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/outline.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Outline [1 Device]</div>
+                        <a href="#Outline1Detail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/outline.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Outline [Unlimited]</div>
+                        <a href="#OutlineUnDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                    <div class="productbox">
+                        <div class="productImgCon">
+                            <img class="productImg" src="Image/outline.jpg" alt="Zoom">
+                        </div>
+                        <div class="productFw">Outline [PC only]</div>
+                        <a href="#OutlinePcDetail" class="seeDetailBtn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Netflix -->
+        <div id="netflixDetail" class="modal">
+            <div class="modalContent">
+                <h2 class="fc">Netflix Premium</h2>
+                <p class="fc">1 Month Subscription</p>
+                <p class="fc">Price: 15,000 Ks</p>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Netflix 1-Month" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+        <!-- Modal for Spotify -->
+        <div id="spotifyDetail" class="modal">
+            <div class="fc modalContent">
+                <h2>Spotify – Individual Plan</h2>
+                <ul>
+                <li>1 Month — 20,000 Ks</li>
+                <li>3 Months — 45,000 Ks (14,600 Ks / Month)</li>
+                <li>6 Months — 70,000 Ks (12,500 Ks / Month)</li>
+                <li>1 Year — 130,000 Ks (10,800 Ks / Month)</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                <li>In-account subscription</li>
+                <li>Need Gmail and password</li>
+                <li>Full warranty</li>
+                </ul>
+
+                <h2>Spotify – Family Plan</h2>
+                <ul>
+                <li>3 Months — 30,000 Ks (10,000 Ks / Month)</li>
+                <li>6 Months — 47,000 Ks (7,800 Ks / Month)</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                <li>Family invite</li>
+                <li>Need Gmail and password</li>
+                <li>Full warranty</li>
+                </ul>
+
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Spotify" class="buyBtn">Order Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+            
+        </div>
+        <!-- Apple Music-->
+        <div id="appleMusicDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Apple Music</h2>
+                <ul>
+                    <li>3 Months — 32,000 ks (10,600 ks / 1Month) </li>
+                    <li>6 Months — 48,000 ks (8,000 ks / 1 Month)</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Family invite</li>
+                    <li>US region Apple ID [importance]</li>
+                    <li>Need Apple ID</li>
+                    <li>Full warranty</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Apple Music" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Education -->
+        <!-- Duolingo -->
+        <div id="duolingoDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Duolingo Super</h2>
+                <ul>
+                    <li>3 Months — 18,000 ks</li>
+                </ul>
+                <h2 class="fc">Duolingo Max</h2>
+                <ul>
+                    <li>1 Months — 15,000 ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Family invite</li>
+                    <li>Need Gmail & password</li>
+                    <li>Full warranty</li>
+                    <li>waiting time 2 hours</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Duolingo Super or max" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Design & Video-->
+         <!-- Canva -->
+        <div id="canvaDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Canva Edu Pro</h2>
+                <ul>
+                    <li>Life Time - 8,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Need Only Gmail</li>
+                    <li>3 years warranty</li>
+                    <li>waiting time : instantly deli </li>
+                </ul>
+                <h2 class="fc">Education Pro admin accound</h2>
+                <ul>
+                    <li>Price - 50,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Can Invite up to 500 members</li>
+                    <li>3 years warranty</li>
+                    <li>waiting time 2 hours</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Canva Education Pro" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- CapCut -->
+         <div id="capcutDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Capcut</h2>
+                <ul>
+                    <li>1 Month - 13,000 ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Private account</li>
+                    <li>New Gmail</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy CapCut Premium" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Artificial Intelligence -->
+        <!-- ChatGPT -->
+        <div id="chatgptDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">ChatGPT</h2>
+                <ul>
+                    <li>1 Month - 22,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Private account</li>
+                    <li>New Gmail</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy ChatGPT Plus" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Gemini -->
+         <div id="geminiDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Gemini</h2>
+                <ul>
+                    <li>1 Year - 33,000 ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Private account</li>
+                    <li>New Gmail</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Gemini Pro" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- social media and business -->
+        <!-- Zoom -->
+         <div id="ZoomDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Zoom Premium</h2>
+                <ul>
+                    <li>1 Month - 18,000ks</li>
+                    <li>3 Months - 45,000ks [15,000ksMonthly]</li>
+                    <li>6 Months - 78,000ks [13,000ksMonthly]</li>
+                    <li>1 Year - 120,000ks [10,000ksMonthly]</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Member License</li>
+                    <li>New Only Gmail</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 1 Hour</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Zoom Premium" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Telegram Premium & star -->
+         <div id="TelegramDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Telegram Premium</h2>
+                <ul>
+                    <li>1 Month - 22,000ks (Login)</li>
+                    <li>3 Months - 55,000ks [18,000ksMonthly]</li>
+                    <li>6 Months - 75,000ks [12,500ksMonthly]</li>
+                    <li>1 Year - 126,000ks [10,500ksMonthly]</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Full warranty</li>
+                    <li>waiting time : instantly deli</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Telegram Premium" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- Star -->
+         <div id="TelegramSDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Zoom Stars</h2>
+                <ul>
+                    <li>50 Stars - 3,600 ks</li>
+                    <li>100 Stars - 7,200 ks</li>
+                    <li>150 Stars - 10,900 ks</li>
+                    <li>250 Stars - 18,000 ks</li>
+                    <li>350 Stars - 25,400 ks</li>
+                    <li>500 Stars - 35,900 ks</li>
+                    <li>750 Stars - 52,500 ks</li>
+                    <li>1,000 Stars - 70,600 Ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Full warranty</li>
+                    <li>waiting time : Instanty deli</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Telegram Star" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+        <!-- VPN -->
+         <!-- Norton VPN -->
+        <div id="NortonDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Norton VPN</h2>
+                <ul>
+                    <li>1 Month - 5,000ks</li>
+                    <li>1 Year - 30,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>1 Device</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Norton VPN" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+         <!-- Express VPN -->
+        <div id="ExpressDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Express VPN</h2>
+                <ul>
+                    <li>1 Month - 15,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>private account</li>
+                    <li>Up to 8 Device</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Express VPN" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+         <!-- Outline VPN -->
+        <div id="Outline1Detail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Outline VPN KEYS</h2>
+                <ul>
+                    <li>1 Month - 4,000ks</li>
+                    <li>2 Months - 7,500ks</li>
+                    <li>3 Months - 11,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Key System</li>
+                    <li>1 device Key</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Outline 1 devive key" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+        <div id="OutlineUnDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Outline VPN Unlimited Devices</h2>
+                <ul>
+                    <li>1 Month(150GB) - 4,000ks</li>
+                    <li>2 Months(250GB) - 7,500ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Key System</li>
+                    <li>Unlimited Devices Key</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Outline Unlimited Devices key" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+        <div id="OutlinePcDetail" class="modal">
+            <div class="fc modalContent">
+                <h2 class="fc">Outline VPN KEYS</h2>
+                <ul>
+                    <li>1 Month - 5,000ks</li>
+                    <li>2 Months - 9,000ks</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                    <li>Key System</li>
+                    <li>1 device Key</li>
+                    <li>Full warranty</li>
+                    <li>waiting time : 30 Minutes</li>
+                </ul>
+                <a href="https://t.me/RayluxMyanmar?text=I want to buy Outline key For PC" class="buyBtn">Buy Now</a>
+                <a href="#!" class="detailCloseBtn">Close</a>
+            </div>
+        </div>
+
+        <!-- Big Customer box -->
+        <div class="CustomberBoxContainer">
+            <div class="customberBox">
+                <div class="title fw fc">Big Customer Of This Month</div>
+                <div class="BestCustomberListBox">
+                    <div class="BestCustomberlist">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">@tirenko</div>
+                        </div>
+                        <div class="mmk fc">33,000ks</div>    
+                    </div>
+                    <div class="pipe"></div>
+                    <div class="BestCustomberlist">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">Aung Myint Myat</div>
+                        </div>
+                        <div class="mmk fc">18,000ks</div>    
+                    </div>
+                    <div class="pipe"></div>
+                                        <div class="BestCustomberlist">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">သရာဲ ပၞာန်မန်</div>
+                        </div>
+                        <div class="mmk fc">14,000ks</div>    
+                    </div>
+                    <div class="pipe"></div>
+                    <!-- Big Customer box end -->
+                </div>
+            </div>
+            <div class="customberBox">
+                <div class="title fw fc">Customer Review</div>
+                <div class="ReviewListBox">
+                    <div class="ReviewList">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">Unknow user</div>
+                        </div>
+                        <div class="reviewfont">ဝိုး! လပ်ကီးဘောနပ်စ်အနေနဲ့ ဒေတာ 2GB ကို 200 ကျပ်နဲ့ ၃ ရက်စာ အသုံးပြုနိုင်ဖို့ *966*944# ကို ခေါ်ဆိုပြီး ဒီနေ့ပဲ ရယူလိုက်ပါ။</div>
+                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
+                        <span class="fz fc">5</span>
+                    </div>
+                    <div class="ReviewList">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">Unknow user</div>
+                        </div>
+                        <div class="reviewfont">You have been successfully unsubscribed from Sheep Adventure daily subscription service.</div>
+                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
+                        <span class="fz fc">1</span>
+                    </div>
+                    <div class="ReviewList">
+                        <div class="profile">
+                            <div class="pfImgContainer">
+                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
+                            </div>
+                                <div class="fc">Unknow user</div>
+                        </div>
+                        <div class="reviewfont">Gaming Royale  ဝန်ဆောင်မှုအသုံးပြုခ ၇ ရက်စာအတွက် (၇၀၀)ကျပ် + (အခွန်) (သို့) နေ့စဉ်ကြေး (၁၀၀)ကျပ် + (အခွန်)ကို နောက် ၂၄ နာရီအတွင်း ကောက်ခံပါမည်။ ဝန်ဆောင်မှုကို ဆက်လက်ရယူရန် လက်ကျန်ငွေကို ချန်ထားပေးပါ၊၊ ရပ်ဆိုင်းရန် *979*3*2# ကိုဖုန်းခေါ်ပါ။ အက်တမ်သည် ငွေပေးချေခြင်းသာ လုပ်ဆောင်ခြင်းဖြစ်ပြီး Gaming Royale ၏ စည်းမျဉ်းစည်းကမ်းများနှင့် မသက်ဆိုင်ပါ။</div>
+                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
+                        <span class="fz fc">3</span>
+                    </div>
+            </div>
+        </div>
+    </div> 
+    <script>
+const btn = document.getElementById("browseBtn");
+const target = document.getElementById("Src");
+
+btn.addEventListener("click", function () {
+  target.scrollIntoView({ behavior: "smooth" });
+});
+</script> 
+<script>
+function scrollToProduct(id){
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+</script>
+</body>
+</html>
