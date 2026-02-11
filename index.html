@@ -13,6 +13,7 @@
     font-size: 30px;
     text-decoration: none;
     color: black;
+    display: none;
     }
     @media (max-width:720px) {
         .Mobmenu {
@@ -136,32 +137,32 @@
         <!-- search bar script -->
         <script>
 function updateCategories(){
-    document.querySelectorAll(".category").forEach(cat=>{
-        let visibleProducts = cat.querySelectorAll(".productbox:not([style*='display: none'])");
-        if(visibleProducts.length === 0){
-            cat.style.display = "none";
-        }else{
-            cat.style.display = "block";
-        }
-    });
-}
+        document.querySelectorAll(".category").forEach(cat=>{
+            let visibleProducts = cat.querySelectorAll(".productbox:not([style*='display: none'])");
+            if(visibleProducts.length === 0){
+                cat.style.display = "none";
+            }else{
+                cat.style.display = "block";
+            }
+        });
+    }
 
-function searchProducts(){
-    let value = document.querySelector(".searchbar").value.toLowerCase();
-    let products = document.querySelectorAll(".productbox");
+    function searchProducts(){
+        let value = document.querySelector(".searchbar").value.toLowerCase();
+        let products = document.querySelectorAll(".productbox");
 
-    products.forEach(p=>{
-        let name = p.innerText.toLowerCase();
-        if(name.includes(value)){
-            p.style.display = "block";
-        }else{
-            p.style.display = "none";
-        }
-    });
+        products.forEach(p=>{
+            let name = p.innerText.toLowerCase();
+            if(name.includes(value)){
+                p.style.display = "block";
+            }else{
+                p.style.display = "none";
+            }
+        });
 
-    updateCategories();
-}
-</script>
+        updateCategories();
+    }
+    </script>
     <!-- end search bar script -->
         <div class="productcontainer" id="products">
             <div class="category">
@@ -683,42 +684,23 @@ function searchProducts(){
             <div class="customberBox">
                 <div class="title fw fc">Customer Review</div>
                 <div class="ReviewListBox">
-                    <div class="ReviewList">
-                        <div class="profile">
-                            <div class="pfImgContainer">
-                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
-                            </div>
-                                <div class="fc">Unknow user</div>
-                        </div>
-                        <div class="reviewfont">ဝိုး! လပ်ကီးဘောနပ်စ်အနေနဲ့ ဒေတာ 2GB ကို 200 ကျပ်နဲ့ ၃ ရက်စာ အသုံးပြုနိုင်ဖို့ *966*944# ကို ခေါ်ဆိုပြီး ဒီနေ့ပဲ ရယူလိုက်ပါ။</div>
-                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
-                        <span class="fz fc">5</span>
+                    <div class="promobox">
+                    <h3>Still building</h3>
                     </div>
-                    <div class="ReviewList">
-                        <div class="profile">
-                            <div class="pfImgContainer">
-                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
-                            </div>
-                                <div class="fc">Unknow user</div>
-                        </div>
-                        <div class="reviewfont">You have been successfully unsubscribed from Sheep Adventure daily subscription service.</div>
-                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
-                        <span class="fz fc">1</span>
+                    <div class="promobox">
+                    <h3>Still building</h3>
                     </div>
-                    <div class="ReviewList">
-                        <div class="profile">
-                            <div class="pfImgContainer">
-                                    <img class="pf" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" >
-                            </div>
-                                <div class="fc">Unknow user</div>
-                        </div>
-                        <div class="reviewfont">Gaming Royale  ဝန်ဆောင်မှုအသုံးပြုခ ၇ ရက်စာအတွက် (၇၀၀)ကျပ် + (အခွန်) (သို့) နေ့စဉ်ကြေး (၁၀၀)ကျပ် + (အခွန်)ကို နောက် ၂၄ နာရီအတွင်း ကောက်ခံပါမည်။ ဝန်ဆောင်မှုကို ဆက်လက်ရယူရန် လက်ကျန်ငွေကို ချန်ထားပေးပါ၊၊ ရပ်ဆိုင်းရန် *979*3*2# ကိုဖုန်းခေါ်ပါ။ အက်တမ်သည် ငွေပေးချေခြင်းသာ လုပ်ဆောင်ခြင်းဖြစ်ပြီး Gaming Royale ၏ စည်းမျဉ်းစည်းကမ်းများနှင့် မသက်ဆိုင်ပါ။</div>
-                        <i class="fz fa-solid fa-star" style="color: #ffb43f;"></i> 
-                        <span class="fz fc">3</span>
+                    <div class="promobox">
+                    <h3>Still building</h3>
                     </div>
+                </div>
+                    
             </div>
         </div>
-    </div> 
+    </div>
+    <!-- telegram link-->
+        <a class="channelBox" target="_blank" href="https://t.me/+7o_t7gU5WHcwYjVl">✨Join Channel</a>
+    <!--END telegram link-->
     <script>
 const btn = document.getElementById("browseBtn");
 const target = document.getElementById("Src");

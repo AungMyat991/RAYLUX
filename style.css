@@ -1,6 +1,30 @@
 body {
     margin: 0px;
-  font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    position: sticky;
+}
+
+.channelBox {
+    position: fixed;       /* stays in place while scrolling */
+    bottom: 20px;          /* distance from bottom */
+    right: 20px;           /* distance from right */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-radius: 50px;   /* rounded pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.245);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 2000;
+    border: solid 1px rgb(154, 154, 154);
+}
+
+.channelBox:hover {
+    transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .hero {
@@ -27,14 +51,18 @@ body {
 }
 
 .mainContainer {
-  min-height: 100vh;
-  background: linear-gradient(
-    200deg,
-    #ffffff 0%,
-    #fff9ec 40%,
-    #fdeec7 100%
-  );
-  padding-top: 20px;
+  background-image: url('Image/Untitled design1.png'); /* path to your image */
+  
+  /* Make it cover the whole screen */
+  background-size: cover;       /* cover entire viewport */
+  background-repeat: no-repeat; /* don’t repeat the image */
+  background-position: center;  /* center it */
+  
+  /* Optional: keep it fixed while scrolling */
+  background-attachment: fixed;
+  
+  /* fallback color in case image fails */
+  background-color: #f0f0f0;
 }
 .menuBoxContainer {
     background: rgba(255, 255, 255, 0.15);
@@ -399,7 +427,7 @@ body {
   color: white;
   padding: 30px;
   display: none;
-  z-index: 3000;
+  z-index: 9000;
 }
 
 .mobileMenu a {
