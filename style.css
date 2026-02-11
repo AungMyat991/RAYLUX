@@ -43,8 +43,8 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: rgb(0, 0, 0);
-    padding: 18px 20px;
-    width: 125px;
+    padding: 18px 10px;
+    width: 150px;
     border-radius: 50px;   /* rounded pill shape */
     text-decoration: none;
     font-weight: bold;
