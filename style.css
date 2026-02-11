@@ -27,6 +27,10 @@ body {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
+.fmg {
+    text-align: center;
+}
+
 .fabM{
     position: fixed;
     bottom: 20px;
@@ -39,12 +43,12 @@ body {
     position: fixed;       /* stays in place while scrolling */
     bottom: 20px;          /* distance from bottom */
     right: 20px;           /* distance from right */
-    background: rgba(255, 255, 255, 0.319);
+    background: rgba(0, 0, 0, 0.319);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: rgb(0, 0, 0);
-    padding: 18px 10px;
-    width: 150px;
+    padding: 12px 20px;
+    width: 130px;
     border-radius: 50px;   /* rounded pill shape */
     text-decoration: none;
     font-weight: bold;
@@ -65,13 +69,9 @@ body {
     box-shadow: 0 0 15px rgba(255,255,255,0.4);
 }
 
-.fmg {
-    text-align: center;
-}
-
 .fabM-menu{
     position: absolute;
-    bottom: 75px;
+    bottom: 60px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ body {
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.245);
     width: 150px;
-    padding: 20px 10px;
+    padding: 15px 10px;
     border-radius: 30px;
     text-decoration: none;
     color: black;
